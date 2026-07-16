@@ -1,0 +1,88 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "astro-rotator"
+version = "0.1.0"
+description = "Software field-derotation tools for altazimuth astrophotography workflows."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+  { name = "Russ Davies" },
+]
+keywords = [
+  "astrophotography",
+  "altazimuth",
+  "derotation",
+  "field-rotation",
+  "astronomy",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Astronomy",
+]
+dependencies = [
+  "astropy>=6.0",
+  "numpy>=1.26",
+  "pydantic>=2.6",
+  "scikit-image>=0.23",
+  "scipy>=1.11",
+  "tifffile>=2024.2",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+raw = [
+  "rawpy>=0.21",
+]
+opencv = [
+  "opencv-python-headless>=4.10",
+]
+photometry = [
+  "photutils>=1.12",
+  "sep>=1.2",
+]
+
+[project.scripts]
+astro-rotator = "astro_rotator.cli:main"
+
+[project.urls]
+Repository = "https://github.com/RusDavies/astro-rotator"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/astro_rotator"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "F",
+  "I",
+  "UP",
+  "B",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
