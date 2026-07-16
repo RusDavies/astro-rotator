@@ -49,6 +49,17 @@ is added.
 
 See `ROADMAP.md` for the current public-facing development direction.
 
+## Development
+
+Run the local verification suite with:
+
+```bash
+scripts/check.sh
+```
+
+See `CONTRIBUTING.md` and `SECURITY.md` before preparing public contributions
+or sharing real frame metadata.
+
 ## License
 
 MIT. See `LICENSE`.

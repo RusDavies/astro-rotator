@@ -22,4 +22,4 @@ formats and integrations.
 
 - Spike WCS-preserving derotation with Astropy `reproject` after FITS/WCS ingestion exists.
 - Explore optional live/streaming adapters after the core transform model is stable.
-- Add contribution, security, and dependency-audit workflows before treating the project as broadly contribution-ready.
+- Expand release, dependency-audit, and contribution workflows before treating the project as broadly contribution-ready.

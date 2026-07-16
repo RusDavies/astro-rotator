@@ -5,6 +5,9 @@ PYTHON="${PYTHON:-python3}"
 
 test -f README.md
 test -f ROADMAP.md
+test -f CONTRIBUTING.md
+test -f SECURITY.md
+test -f .github/workflows/checks.yml
 test -f docs/PRODUCT_BRIEF.md
 test -f docs/REQUIREMENTS.md
 test -f docs/ARCHITECTURE.md
@@ -14,6 +17,7 @@ test -f docs/SYNTHETIC_STAR_FIELD_GENERATOR.md
 test -f docs/ANGLE_EVIDENCE_REPORT_SCHEMA.md
 test -f docs/IMAGE_FORMATS_AND_METADATA.md
 test -f pyproject.toml
+test -x scripts/security_check.sh
 test -f src/astro_rotator/__init__.py
 test -f tests/test_package.py
 
