@@ -60,6 +60,8 @@ scripts/check.sh
 See `CONTRIBUTING.md` and `SECURITY.md` before preparing public contributions
 or sharing real frame metadata.
 
+Before changing repository visibility, use `PUBLIC_RELEASE_CHECKLIST.md`.
+
 ## License
 
 MIT. See `LICENSE`.

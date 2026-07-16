@@ -5,6 +5,7 @@ PYTHON="${PYTHON:-python3}"
 
 test -f README.md
 test -f ROADMAP.md
+test -f PUBLIC_RELEASE_CHECKLIST.md
 test -f CONTRIBUTING.md
 test -f SECURITY.md
 test -f .github/workflows/checks.yml
