@@ -223,6 +223,7 @@ def test_derotate_geometry_mode_requires_complete_direct_geometry_inputs(tmp_pat
             "--angle-source",
             "geometry",
         ],
+        color=False,
     )
 
     assert result.exit_code != 0
